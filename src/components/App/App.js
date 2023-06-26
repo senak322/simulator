@@ -8,6 +8,8 @@ import Main from "../Main/Main";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(true);
+  const [isGameStarted, setIsGameStarted] = useState(false);
+  const [buttonsToGame, setButtonsToGame] = useState([]);
   const buttonsArr = ["j", "f", "k", "d", " "];
   const colors = [
     "text-primary",
@@ -21,9 +23,16 @@ function App() {
     setLoggedIn(false);
   }, []);
 
-  function getRandomInt(max) {
+  const getRandomInt = useCallback((max) => {
     return Math.floor(Math.random() * Math.floor(max));
-  }
+  }, [])
+
+  const createButtons = useCallback(() => {
+    for (let i = 0; i < 20; i++) {
+      let rand = getRandomInt(buttonsArr.length);
+      setButtonsToGame()
+    }
+  }, [])
 
   return (
     <div className="App">
@@ -33,7 +42,7 @@ function App() {
           path="/"
           element={
             <ProtectedRoute loggedIn={loggedIn}>
-              <Main onLogout={handleLogout} />
+              <Main onLogout={handleLogout} isGameStarted={isGameStarted} buttonsArr={buttonsArr}/>
             </ProtectedRoute>
           }
         />
