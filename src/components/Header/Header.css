@@ -1,0 +1,12 @@
+.header {
+    width: 100%;
+    background-color: #f1faff;
+}
+
+.header__link {
+    display: flex;
+}
+
+.header__img {
+    width: 15rem;
+}
