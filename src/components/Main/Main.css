@@ -3,3 +3,15 @@
     text-align: center;
     font-family: OpenSans-regular, Arial, Helvetica, sans-serif;
 }
+
+.main__container {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main__button {
+    min-height: 3rem;
+    min-width: 2rem;
+}
