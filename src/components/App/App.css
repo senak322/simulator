@@ -2,4 +2,29 @@
   
 }
 
+.button {
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.red {
+    background-color: rgb(249, 63, 63);
+}
+
+.blue {
+    background-color: rgb(60, 60, 255);
+}
+
+.grey {
+    background-color: rgb(92, 92, 92)
+}
+
+.green {
+    background-color: rgb(23, 181, 62);
+}
+
+.purple {
+    background-color: rgb(144, 21, 144);
+}
 
