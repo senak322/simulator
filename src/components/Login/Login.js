@@ -13,11 +13,11 @@ function Login({ loggedIn, handleLogin, onOpenForgotPopup, isLogin }) {
       <p>Войти на платформу</p>
       <form className="login__form">
         <label className="login__label">
-          <input type="text"></input>
+          <input type="text" required></input>
           <span className="login__placeholder">Логин</span>
         </label>
         <label className="login__label">
-          <input type="password"></input>
+          <input type="password" required></input>
           <span className="login__placeholder">Пароль</span>
         </label>
       </form>
