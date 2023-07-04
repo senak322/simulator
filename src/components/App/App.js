@@ -5,9 +5,10 @@ import "./App.css";
 import Header from "../Header/Header";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import Main from "../Main/Main";
+import Login from "../Login/Login";
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
   const [isGameStarted, setIsGameStarted] = useState(false);
   const [buttonsToGame, setButtonsToGame] = useState([]);
   const [countRight, setCountRight] = useState(0);
@@ -118,6 +119,16 @@ function App() {
                 countError={countError}
               />
             </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/signin"
+          element={
+            
+              <Login
+              loggedIn={loggedIn}
+              />
+            
           }
         />
       </Routes>
