@@ -88,13 +88,13 @@ function App() {
   }, [countRight, countError]);
 
   useEffect(() => {
-    if (!isGameStarted) {
+    if (!isGameStarted && loggedIn) {
       document.addEventListener("keydown", startGame);
       return () => {
         document.removeEventListener("keydown", startGame);
       };
     }
-  }, [isGameStarted, startGame]);
+  }, [isGameStarted, startGame, loggedIn]);
 
   useEffect(() => {
     if (isGameStarted) {
