@@ -19,14 +19,16 @@ function App() {
   const colors = useMemo(() => {
     return [
       "button red",
-      "button blue", 
+      "button blue",
       "button grey",
       "button green",
       "button purple",
     ];
   }, []);
 
-  // let buttonsArr = useMemo(() => [], []);
+  const handleLogin = useCallback(() => {
+    setLoggedIn(true);
+  }, []);
 
   const handleLogout = useCallback(() => {
     setLoggedIn(false);
@@ -105,7 +107,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header loggedIn={loggedIn} handleLogout={handleLogout}/>
       <Routes>
         <Route
           path="/"
@@ -123,13 +125,7 @@ function App() {
         />
         <Route
           path="/signin"
-          element={
-            
-              <Login
-              loggedIn={loggedIn}
-              />
-            
-          }
+          element={<Login loggedIn={loggedIn} handleLogin={handleLogin} />}
         />
       </Routes>
     </div>

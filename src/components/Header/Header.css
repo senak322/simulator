@@ -1,6 +1,10 @@
 .header {
     width: 100%;
     background-color: #f1faff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem;
+    align-items: center;
 }
 
 .header__link {
@@ -9,4 +13,11 @@
 
 .header__img {
     width: 15rem;
+}
+
+.header__logout {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    height: 2.5rem;
 }
